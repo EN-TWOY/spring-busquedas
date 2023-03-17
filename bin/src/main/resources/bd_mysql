@@ -1,0 +1,25 @@
+drop database if exists bd_practice_spring;
+create database bd_practice_spring;
+use bd_practice_spring;
+
+create table tb_usuario(
+cod_usu int primary key auto_increment,
+nom_usu varchar(30),
+pat_usu varchar(30),
+mat_usu varchar(30),
+fec_nac_usu date,
+est_civil_usu varchar(15),
+gen_usu varchar(15),
+ema_usu varchar(50),
+pas_usu varchar(50)
+);
+
+insert into tb_usuario values
+(1, 'Ricardo Adrian', 'Martinez', 'Torres', '2001-03-04', 'Casado', 'M', 'ricardo@gmail.com', '12345'),
+(2, 'Cristhian Mendez', 'Martinez', 'Sol', '2000-03-04', 'Casado', 'M', 'cris@gmail.com', '12345'),
+(3, 'Marcelo Brain', 'Martinez', 'Lopez', '2002-03-04', 'Soltero', 'M', 'marcelo@gmail.com', '12345'),
+(4, 'Maria Lucero', 'Martinez', 'Aguilar', '2000-03-04', 'Soltera', 'F', 'maria@gmail.com', '12345'),
+(5, 'Ronald Luis', 'Martinez', 'Suarez', '2001-03-04', 'Casado', 'M', 'ronald@gmail.com', '12345'),
+(6, 'Adriana Linda', 'Montiel', 'Luna', '2000-03-14', 'Soltera', 'F', 'adriana@gmail.com', 'abcdf');
+
+select * from tb_usuario;
