@@ -13,7 +13,7 @@ import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "tb_usuario")
-public class UsuarioDTO {
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -119,7 +119,7 @@ public class UsuarioDTO {
 	}
 
 	// constructors
-	public UsuarioDTO(Integer codUsu, String nomUsu, String patUsu, String matUsu, Date fecNacUsu, String estCivilUsu,
+	public Usuario(Integer codUsu, String nomUsu, String patUsu, String matUsu, Date fecNacUsu, String estCivilUsu,
 			String genUsu, String emaUsu, String pasUsu) {
 		super();
 		this.codUsu = codUsu;
@@ -133,7 +133,7 @@ public class UsuarioDTO {
 		this.pasUsu = pasUsu;
 	}
 
-	public UsuarioDTO() {
+	public Usuario() {
 		super();
 	}
 	

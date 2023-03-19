@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.proyecto.practica.entity.UsuarioDTO;
+import com.proyecto.practica.entity.Usuario;
 import com.proyecto.practica.service.UsuarioService;
 
 @Controller
@@ -24,7 +24,7 @@ public class UsuarioController {
 	@RequestMapping("/lista")
 	public String inicio(Model model) {
 
-		List<UsuarioDTO> dataUsuario = serviUsuario.listarUsuarios();
+		List<Usuario> dataUsuario = serviUsuario.listarUsuarios();
 		model.addAttribute("listUsuarios", dataUsuario);
 		
 		return "usuario";
